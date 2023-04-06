@@ -4,3 +4,5 @@
 2. [Структурные шаблоны](https://github.com/AlexanderTimin96/Patterns_Homework/tree/main/Structural%20patterns)
 
 3. [Поведенческие шаблоны](https://github.com/AlexanderTimin96/Patterns_Homework/tree/main/Behavioral%20patterns/Iterator)
+
+4. [Magics, DRY, SOLID](https://github.com/AlexanderTimin96/Patterns_Homework/tree/main/SOLID/Shop)
