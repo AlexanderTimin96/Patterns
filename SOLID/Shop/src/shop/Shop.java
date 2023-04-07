@@ -14,10 +14,6 @@ import java.util.Scanner;
 public class Shop {
     private List<Product> products = new ArrayList<>();
     private final List<Product> basket = new ArrayList<>();
-    //
-    //Single-responsibility principle - каждый класс отвечает за свои действия (фильтруются продукты с помощью
-    // отельного класса Filter)
-    //
     private final Filter filter = new Filter();
 
     public void start() {
@@ -41,10 +37,6 @@ public class Shop {
             } else if (answer == 1) {
                 while (true) {
                     System.out.println("Для добавления товара в корзину введите его номер, для выхода в меню введите 0");
-                    //
-                    // Магические числа не используются - используется products.size() (Magics)
-                    // Все повторяющиеся действия вынесены в отдельные методы или циклы (DRY)
-                    //
                     answer2 = parseToInt(scanner, products.size());
                     if (answer2 == 0) {
                         break;
@@ -97,12 +89,6 @@ public class Shop {
         }
         System.out.println();
     }
-
-    //
-    //Liskov substitution principle и Dependency inversion principle - класс Product абстрактный, все добавляемые продукты
-    // наследуются и модифицируют/расширяют данный класс. Добавляются в список который принимает родителя - List<Product>
-    // модифицируют/расширяют данный класс. Добавляются в список который принимает родителя - List<Product>
-    //
 
     private void fillProduct() {
         products.add(new Pen(15, 2, Manufacturer.USA, "зеленая"));

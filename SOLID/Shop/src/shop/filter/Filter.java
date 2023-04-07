@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Filter {
+public class Filter implements FilterbyPrice, FilterbyManufacturer, FilterByRating {
+    @Override
     public List<Product> byPrice(List<Product> list, int price, Comparison comparison) {
         List<Product> result;
 
